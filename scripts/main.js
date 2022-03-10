@@ -2,6 +2,7 @@ console.log("hello beautiful");
 import { loadLegos, useLegos } from './legos/LegoData.js';
 import { makeLegoList } from './legos/LegoList.js';
 import { BuildersBio } from './bio/BuildersBio.js';
+import { removeData } from './legos/LegoData.js';
 
 const navElement = document.querySelector("nav");
 let bioElement = document.querySelector("bio__content")
@@ -57,11 +58,12 @@ const filterLegos = (whatFilter, filterType="name") => {
 
 
 
+
 //EIA - Everything Is Awesome
 const startEIA = () => {
 	loadLegos()
 	.then(legoArray => {
-		makeLegoList(legoArray)
+		makeLegoList(removeData(legoArray))
 	});
 	const asideElement = document.querySelector("aside");
 	asideElement.innerHTML += BuildersBio();
