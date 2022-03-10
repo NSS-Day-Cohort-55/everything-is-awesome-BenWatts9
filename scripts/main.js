@@ -6,6 +6,33 @@ import { BuildersBio } from './bio/BuildersBio.js';
 const navElement = document.querySelector("nav");
 let bioElement = document.querySelector("bio__content")
 
+document.querySelector("#material").addEventListener('change', function(event){
+	if (event.target.value === "Solid") {
+		filterLegoMaterials("Solid")
+	} else if (event.target.value === "Transparent") {
+		filterLegoMaterials("Transparent")
+	} else if (event.target.value === "Pearl") {
+		filterLegoMaterials("Pearl")
+	} else if (event.target.value === "Chrome") {
+		filterLegoMaterials("Chrome")
+	} else if (event.target.value === "Metallic") {
+		filterLegoMaterials("Metallic")
+	} else if (event.target.value === "Milky") {
+		filterLegoMaterials("Milky")
+	} else if (event.target.value === "Glitter") {
+		filterLegoMaterials("Glitter")
+	} else if (event.target.value === "Speckle") {
+		filterLegoMaterials("Speckle")
+	} else if (event.target.value === "Ink") {
+		filterLegoMaterials("Ink")
+	} else if (event.target.value === "Process") {
+		filterLegoMaterials("Process")
+	} else if (event.target.value === "Modulex") {
+		filterLegoMaterials("Modulex")
+	}
+	
+})
+
 navElement.addEventListener("click", (event) => {
 	if (event.target.id === "showRed") {
 		filterLegos("Red")
@@ -17,9 +44,20 @@ navElement.addEventListener("click", (event) => {
 
 })
 
+
+
 const filterLegos = (whatFilter) => {
 	const filterArray = useLegos().filter(singleLego => {
 		if (singleLego.LegoName.includes(whatFilter)) {
+			return singleLego;
+		}
+	})
+	makeLegoList(filterArray);
+}
+
+const filterLegoMaterials = (whatFilter) => {
+	const filterArray = useLegos().filter(singleLego => {
+		if (singleLego.Material.includes(whatFilter)) {
 			return singleLego;
 		}
 	})
