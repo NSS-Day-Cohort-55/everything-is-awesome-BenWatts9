@@ -19,9 +19,26 @@ navElement.addEventListener("click", (event) => {
 		makeLegoList(useLegos());
 	} else if (event.target.id ==="showGreen") {
 		filterLegos("Green")
+	} else if (event.target.id ==="sortBtn") {
+		let legoz = useLegos()
+		legoz.sort(smallsort)
+		makeLegoList(legoz)
 	}
-
 })
+
+const smallsort = (a,b) => {
+	if(a.YearFrom !=="" || b.YearFrom !==""){
+		const avalue = parseInt(a.YearFrom)
+		const bvalue = parseInt(b.YearFrom)
+		let yearValue = 0
+		if (avalue > bvalue) {
+			yearValue = 1
+		}else if (avalue < bvalue){
+			yearValue =-1
+		}
+		return yearValue
+}
+}
 
 
 searchEl.addEventListener('keypress', (event)=> {
