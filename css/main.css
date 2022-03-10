@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+main {
+  display: flex;
+}
+
 body {
 	background: #eaedf1;
 	font-family: 'Lato', sans-serif;
