@@ -28,3 +28,11 @@ export const invertColor = (hex) => {
   export const capBricks = (str) => {
 	return str.toUpperCase()
   }
+
+  export const yearsFunc = (year1, year2) => {
+	let newYears = parseInt(year2)-parseInt(year1)
+	return newYears
+}
+  
+
+	  
