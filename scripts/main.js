@@ -7,8 +7,8 @@ const navElement = document.querySelector("nav");
 const bioElement = document.querySelector("bio__content")
 
 navElement.addEventListener("click", (event) => {
-	if (event.target.id === "showBlue") {
-		filterLegos("Blue")
+	if (event.target.id === "showRed") {
+		filterLegos("Red")
 	} else if (event.target.id === "showAll") {
 		makeLegoList(useLegos());
 	}
