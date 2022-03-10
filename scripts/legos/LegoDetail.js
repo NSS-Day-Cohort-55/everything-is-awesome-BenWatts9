@@ -8,8 +8,11 @@ export const LegoDetail = (brick) => {
                   ${link ? `<div><img src="./images/legoblock.png"></div>` : ""}
                   <h3>Name: ${brick.LegoName}</h3>
                 </div>
-                <div class="block-years">Manufactured ${1 + brick.YearTo - brick.YearFrom} years, ${brick.YearFrom} - ${brick.YearTo}</div>
-              </section>`;
+                <div class="block-years">Manufactured ${1 + brick.YearTo - brick.YearFrom} years, ${brick.YearFrom} - ${brick.YearTo}</div>`
+                if (brick.Notes !== ""){
+                  block += `<div class="block__notes">${brick.Notes}</div>`
+                } 
+              `</section>`;
   
 
   if (link) {
