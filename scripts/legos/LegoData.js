@@ -12,3 +12,7 @@ export const loadLegos = () => {
       return legoArray.LegoColorss;
     })
 };
+
+export const removeData = (arr) => {
+  return arr.filter(item => item.LegoName !== "" && item.LegoId !== "301")
+}
