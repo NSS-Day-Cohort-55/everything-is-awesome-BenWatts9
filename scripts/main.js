@@ -4,7 +4,7 @@ import { makeLegoList } from './legos/LegoList.js';
 import { BuildersBio } from './bio/BuildersBio.js';
 
 const navElement = document.querySelector("nav");
-const bioElement = document.querySelector("bio__content")
+let bioElement = document.querySelector("bio__content")
 
 navElement.addEventListener("click", (event) => {
 	if (event.target.id === "showRed") {
