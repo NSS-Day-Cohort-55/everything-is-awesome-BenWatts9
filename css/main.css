@@ -1,0 +1,94 @@
+@import url('buttons.css');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #eaedf1;
+	font-family: 'Lato', sans-serif;
+  margin-top:0;
+}
+
+/* Head and nav styles */
+header {
+  background-color: #efffd1;
+  padding: .5em;
+  background-image: url("../images/lego-blocks-pattern.jpg");
+  box-shadow: 0px 3px 5px grey;
+}
+h1 {
+  margin-bottom: 0;
+  margin-top:0;
+  color:white;
+  text-shadow: 2px 2px #100f0f;
+  font-size: 2.25em;
+}
+small {
+  margin-bottom: 1em;
+  background-color:rgba(255, 255, 255, 0.6);
+}
+nav {
+  margin-top: 1em;
+}
+
+
+/* Lego block details styles */
+article a {
+  text-decoration: none;
+}
+
+.block-wrapper {
+  padding:.25em 0;
+}
+/* apply padding to all children of this element*/
+.block-wrapper section > * {
+  padding:.5em;
+}
+.blockname {
+  display:flex;
+}
+.blockname img {
+  height: 50px;
+}
+
+
+/* Bio Styles */
+.bio_name {
+  text-align: center;
+  background-color:yellowgreen;
+  padding: .5em;
+  margin-top: 0;
+}
+aside article {
+  background-image: linear-gradient(45deg, #efffd1 25%, #ffffff 25%, #ffffff 50%, #efffd1 50%, #efffd1 75%, #ffffff 75%, #ffffff 100%);
+  background-size: 56.57px 56.57px;
+}
+.bio_image {
+  width: 100%;
+}
+.bio_headline {
+  font-size: 2em;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: .5em;
+  margin-bottom: 0;
+  margin-top:.5em;
+}
+.bio_general_info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  border-top:2px solid red;
+  margin-bottom:.5em;
+}
+.bio_general_info h3 {
+  flex: 0 1 30%;
+}
+.bio_generalInfo h2 {
+  text-align: center;
+  background-color: pink;
+  padding: .5em;
+  margin-bottom: 0;
+}
